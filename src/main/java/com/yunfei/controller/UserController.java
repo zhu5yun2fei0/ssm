@@ -24,6 +24,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/hello",method = RequestMethod.GET)
 	@ResponseBody
+	 //做跨域请求
 	@CrossOrigin(origins = "http://localhost:8082")
 	public String  getUser() {
 		List<User> list=dao.findAll();
