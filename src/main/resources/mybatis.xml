@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>  
+         <!--   
+            通过package标签设置实现了将某一个包下的所有的实体类都以简单类名作为别名的设置，  
+            这样避免了分别为每一个实体类设置别名的麻烦（配置完成之后，xxxMapper.xml中不用再写全类名了直接写别名即可）  
+          -->  
+           
+         <package name="com.yunfei.entity"/>  
+    </typeAliases>  
+      
+    <!-- 这种方式在这里引入 xxxMapper.xml文件比较麻烦，且有多少个映射文件就要引入多少次  
+        为了解决这个事情，可以在sqlSessionFactory的配置中，设置扫描放置xxxMapper.xml文件的包  
+        这样可以自动扫描包下面的所有实体映射文件  
+    -->  
+<!--     <mappers>  -->  
+<!--             <mapper resource="mapper.xml"/>  -->  
+<!--     </mappers> -->  
+</configuration> 
